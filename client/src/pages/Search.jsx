@@ -37,7 +37,7 @@ export default function Search() {
     const fetchListings = async () => {
       try {
         setLoading(true);
-        const res = await fetch(`/api/listing/get?${urlParams.toString()}`);
+        const res = await fetch(`https://real-estate-58jo.onrender.com/api/listing/get?${urlParams.toString()}`);
         const data = await res.json();
         setListings(data);
         setShowMore(data.length > 8);
@@ -82,7 +82,7 @@ export default function Search() {
     urlParams.set('startIndex', listings.length);
 
     try {
-      const res = await fetch(`/api/listing/get?${urlParams.toString()}`);
+      const res = await fetch(`https://real-estate-58jo.onrender.com/api/listing/get?${urlParams.toString()}`);
       const data = await res.json();
       setListings((prev) => [...prev, ...data]);
       if (data.length < 9) setShowMore(false);

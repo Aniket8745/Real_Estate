@@ -56,7 +56,7 @@ export default function Listing() {
 
     console.log("token:", token);
     try {
-      const orderRes = await fetch("http://localhost:3000/api/user/order", {
+      const orderRes = await fetch("http://localhost:3000https://real-estate-58jo.onrender.com/api/user/order", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -79,7 +79,7 @@ export default function Listing() {
           console.log("Payment response:", response);
           console.log("mytoken:", token);
           const verifyRes = await fetch(
-            "http://localhost:3000/api/user/verifyOrder",
+            "http://localhost:3000https://real-estate-58jo.onrender.com/api/user/verifyOrder",
             {
               method: "POST",
               headers: {
@@ -119,7 +119,7 @@ export default function Listing() {
     const fetchFeedBackListing = async () => {
       try {
         const res = await fetch(
-          `http://localhost:3000/api/auth/feedback/listing/${params.listingId}`,
+          `http://localhost:3000https://real-estate-58jo.onrender.com/api/auth/feedback/listing/${params.listingId}`,
           {
             method: "GET",
             headers: {
@@ -147,7 +147,7 @@ export default function Listing() {
 
     try {
       const response = await fetch(
-        `http://localhost:3000/api/user/feedback/listing/${params.listingId}`,
+        `http://localhost:3000https://real-estate-58jo.onrender.com/api/user/feedback/listing/${params.listingId}`,
         {
           method: "POST",
           headers: {
@@ -188,7 +188,7 @@ export default function Listing() {
     const fetchListing = async () => {
       try {
         setLoading(true);
-        const res = await fetch(`/api/listing/get/${params.listingId}`);
+        const res = await fetch(`https://real-estate-58jo.onrender.com/api/listing/get/${params.listingId}`);
         const data = await res.json();
         if (data.success === false) {
           setError(true);

@@ -19,9 +19,9 @@ export default function Home() {
       try {
         setLoading(true);
         const [offersRes, rentRes, saleRes] = await Promise.all([
-          fetch('/api/listing/get?offer=true&limit=8'),
-          fetch('/api/listing/get?type=rent&limit=8'),
-          fetch('/api/listing/get?type=sale&limit=8')
+          fetch('https://real-estate-58jo.onrender.com/api/listing/get?offer=true&limit=8'),
+          fetch('https://real-estate-58jo.onrender.com/api/listing/get?type=rent&limit=8'),
+          fetch('https://real-estate-58jo.onrender.com/api/listing/get?type=sale&limit=8')
         ]);
         
         const [offers, rent, sale] = await Promise.all([
